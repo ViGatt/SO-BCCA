@@ -13,6 +13,8 @@ mov sp, bp ; a pilha começa com seu topo apontado para a sua base
 
 ; começamos em modo real 16
 mov bx, MENSAGEM_REAL_MODE
+call imprime
+call imprime_quebra
 
 call carregar_kernel ; função definida mais abaixo
 call mudar_para_modo_protegido ; função no arquivo modo32.asm
